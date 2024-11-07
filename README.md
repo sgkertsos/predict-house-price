@@ -17,4 +17,4 @@ https://www.kaggle.com/datasets/elakiricoder/jiffs-house-price-prediction-datase
 
 but you don't need to download it. It can be found in the **data** folder as **data.csv**
 
-### Tecnologies used
+### Technologies used
