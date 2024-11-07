@@ -16,3 +16,5 @@ We will use **Jiffs house price prediction** dataset from Kaggle. The dataset ca
 https://www.kaggle.com/datasets/elakiricoder/jiffs-house-price-prediction-dataset
 
 but you don't need to download it. It can be found in the **data** folder as **data.csv**
+
+### Tecnologies used
