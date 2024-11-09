@@ -66,6 +66,11 @@ The following folders/files are included in the application:
 
 ### Run the application
 
+#### Install Jupyter Notebook
+To install Jupyter Notebook you can use the following link:
+
+https://docs.jupyter.org/en/latest/install/notebook-classic.html
+
 #### Install Docker and Docker Compose 
 To install Docker and Docker Compose you can use the following links:
 
@@ -76,5 +81,5 @@ https://docs.docker.com/compose/install/
 Open a terminal, navigate to a folder where you want the repository files to be stored and then type:  
 
 ```console
-git clone https://github.com/sgkertsos/ecommerce-site-assistant.git
+git clone https://github.com/sgkertsos/predict-house-price.git
 ```
