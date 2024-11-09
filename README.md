@@ -21,10 +21,8 @@ but you don't need to download it. It can be found in the **data** folder as **d
 
 #### Streamlit
 ![image info](./images/streamlit.png)  
-Streamlit is used to create the user interface (UI). The user types a question, hits the Enter button and after a while an answer is produced by the assistant. The user
-question and the generated answered are stored in the Postgres database. There are also Thumbs Up and Thumbs Down buttons so that the user can provide a feedback. 
-Thumbs Up for a relevant answer and Thumbs Down for a non relevant answer. Feedback is also stored in the Postgres database.
+Streamlit is used to create the user interface (UI). The user fills in the house features. Then he clicks on the **Calculate Price** button and the predicted house price is displayed.
 
 #### Docker
 ![image info](./images/docker.png)  
-Every application component mentioned above is actually a docker container. When we start the application all the containers start one by one in a specific order until the user interface is presented to the user and we can start typing questions.
+We use docker to create the containers for our app. We actually have two containers. One which contains the user interface and the script that allows us to connect to the predict service, and one which is actually our predict service.
