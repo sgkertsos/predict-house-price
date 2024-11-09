@@ -17,4 +17,14 @@ https://www.kaggle.com/datasets/elakiricoder/jiffs-house-price-prediction-datase
 
 but you don't need to download it. It can be found in the **data** folder as **data.csv**
 
-### Technologies used
+### Tecnologies used
+
+#### Streamlit
+![image info](./images/streamlit.png)  
+Streamlit is used to create the user interface (UI). The user types a question, hits the Enter button and after a while an answer is produced by the assistant. The user
+question and the generated answered are stored in the Postgres database. There are also Thumbs Up and Thumbs Down buttons so that the user can provide a feedback. 
+Thumbs Up for a relevant answer and Thumbs Down for a non relevant answer. Feedback is also stored in the Postgres database.
+
+#### Docker
+![image info](./images/docker.png)  
+Every application component mentioned above is actually a docker container. When we start the application all the containers start one by one in a specific order until the user interface is presented to the user and we can start typing questions.
