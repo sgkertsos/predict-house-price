@@ -97,6 +97,16 @@ After the application loading is done we have two docker containers running simu
 * Gunicorn on port 9696    
 * Streamlit on port 8501
 
+When the Gunicorn docker container starts for the first time, the **init.py** script runs. In this script the following happen:
+
+* Data is loaded
+* Data preparation is made
+* Data is split into train and test data
+* A Random Forest Regressor model with specific parameters is trained. The specific model and the specific parameters were selected after model evaluation is performed by using the **notebook.ipynb** Jupyter Notebook file.
+* The model is saved under the filename **model.bin**.
+
+This model is then loaded by the house price predict web service to predict house prices. 
+
 ### Access the user interface
 Open your preferred browser and navigate to the following address:
 
