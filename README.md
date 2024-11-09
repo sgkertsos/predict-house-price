@@ -20,11 +20,11 @@ but you don't need to download it. It can be found in the **data** folder as **d
 ### Tecnologies used
 
 #### Gunicorn
-![image info](./images/gunicorn.png)
+![image info](./images/gunicorn.png)  
 Gunicorn is s a Python WSGI (Web Server Gateway Interface) HTTP Server. The Flask application runs on this server.
 
 ### Flask
-![image info](./images/flask.png)
+![image info](./images/flask.png  
 Flask is the framework which we use to create the prediction web service. 
 
 #### Streamlit
@@ -36,6 +36,6 @@ Streamlit is used to create the user interface (UI). The user fills in the house
 We use docker to create the containers for our app. We actually have two containers. One which contains the user interface and the script that allows us to connect to the predict service, and one which is actually our predict service.
 
 #### Scikit-learn
-![image info](./images/scikit-learn.png)
+![image info](./images/scikit-learn.png)  
 We use the **scikit-learn** python library to handle data splitting, model training, model evaluation and other things.
 
