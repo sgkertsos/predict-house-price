@@ -63,3 +63,18 @@ The following folders/files are included in the application:
 * **predict_service.py** This is the house price prediction web service. This service receives all the house features and returns a predicted price for the house.
 * **notebook.ipynb** This is a Jupyter notebook file which was used for model evaluation and model final selection. After the best model with its parameters is selected, this model is then used in the application.
 * **README.md**. This file.
+
+### Run the application
+
+#### Install Docker and Docker Compose 
+To install Docker and Docker Compose you can use the following links:
+
+https://docs.docker.com/engine/install/  
+https://docs.docker.com/compose/install/
+
+#### Clone the github repository
+Open a terminal, navigate to a folder where you want the repository files to be stored and then type:  
+
+```console
+git clone https://github.com/sgkertsos/ecommerce-site-assistant.git
+```
