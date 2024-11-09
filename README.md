@@ -24,7 +24,7 @@ but you don't need to download it. It can be found in the **data** folder as **d
 Gunicorn is s a Python WSGI (Web Server Gateway Interface) HTTP Server. The Flask application runs on this server.
 
 ### Flask
-![image info](./images/flask.png  
+![image info](./images/flask.png)  
 Flask is the framework which we use to create the prediction web service. 
 
 #### Streamlit
