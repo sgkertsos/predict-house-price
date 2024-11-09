@@ -83,3 +83,23 @@ Open a terminal, navigate to a folder where you want the repository files to be 
 ```console
 git clone https://github.com/sgkertsos/predict-house-price.git
 ```
+#### Start the application
+Start the application by typing the following commands:
+
+```console
+cd app
+docker compose up
+```
+Wait for the application to load. 
+
+After the application loading is done we have two docker containers running simultaneously:
+
+* Gunicorn on port 9696    
+* Streamlit on port 8501
+
+### Access the user interface
+Open your preferred browser and navigate to the following address:
+
+http://localhost:8501
+
+The application loads and you are presented with the house features form.
