@@ -1,0 +1,18 @@
+services:
+  predict_service:
+    build:
+      context: .
+      dockerfile: Dockerfile.flask
+    container_name: predict_service
+    ports:
+      - "9696:9696"
+  
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    container_name: streamlit
+    ports:
+      - "8501:8501"
+    depends_on:
+      - predict_service

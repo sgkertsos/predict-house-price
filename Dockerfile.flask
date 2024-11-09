@@ -1,0 +1,18 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY requirements.1.txt .
+RUN pip install -r requirements.1.txt
+
+COPY train.py .
+COPY predict_service.py .
+
+RUN mkdir data
+COPY ./data/data.csv ./data/
+
+RUN python train.py
+
+EXPOSE 9696
+
+ENTRYPOINT [ "gunicorn", "--bind=0.0.0.0:9696", "predict_service:app" ]
