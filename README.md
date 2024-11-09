@@ -39,3 +39,22 @@ We use docker to create the containers for our app. We actually have two contain
 ![image info](./images/scikit-learn.png)  
 We use the **scikit-learn** python library to handle data splitting, model training, model evaluation and other things.
 
+### Application flow
+
+#### Application flow diagram
+![image info](./images/rag_flow.png)  
+
+### Application structure
+
+The following folders/files are included in the application:
+
+* **app** folder. This folder contains all the files needed for the application to run.
+* **data** folder. The application data file is stored here.
+* **docker-compose.yaml, Dockerfile.gunicorn** and **Dockerfile.streamlit** are used by docker to create the **UI** and **Predict Web Service** application containers.
+* **requirements.streamlit.txt**. All python libraries with their versions, used by the UI container are stored here.
+* **app.py**. This is the application entry point. It is the file that is loaded when the UI container starts.
+* **predict_service_functions.py** This file contains the necessary functions to connect to the house price predict web service.
+* **requirements.gunicorn.txt**. All python libraries with their versions, used by the predict service container are stored here.
+* **init.py**. This file is used to perform data preparation and cleaning, to split the data into train and test datasets, to train and finally save the model.
+* **predict_service.py** This is the house price prediction web service. This service receives all the house features and returns a predicted price for the house.
+* **README.md**. This file.
