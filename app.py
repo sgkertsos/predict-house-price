@@ -1,9 +1,10 @@
 import streamlit as st
 import datetime as dt
 
+from ask_for_house_price import predict_house_price
+
 # Variables
 # The host where the price prediction service resides
-url = 'http://127.0.0.1:9696/predict_house_price'
 yes_no_options = {
     'Yes': 1,
     'No': 0
@@ -62,10 +63,12 @@ def main():
     }
 
     # Create calculate price button
-    price = st.button('Calculate price')
-    if price:
-        st.write('Price is: ', house['room_size'])
-
+    calculate_price_clicked = st.button('Calculate price')
+    if calculate_price_clicked:
+        # Get house price
+        house_price = predict_house_price(house)
+        # Write house price
+        st.write('Price is: ', house_price)
 
 if __name__ == "__main__":
     main()

@@ -25,10 +25,10 @@ def predict():
 
     # Get house price prediction
     X_house = dv.transform([house])
-    price = np.expm1(model.predict(X_house)[0])
+    house_price = int(np.expm1(model.predict(X_house)[0]))
 
     result = {
-        'price': price
+        'house_price': house_price
     }
 
     return jsonify(result)

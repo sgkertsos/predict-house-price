@@ -48,6 +48,9 @@ df_test = df_test.reset_index(drop=True)
 y_train = np.log1p(df_train['property_value'].values)
 y_test = np.log1p(df_test['property_value'].values)
 
+# Save test data to a csv file
+df_test.to_csv('./data/test.csv')
+
 # Delete the target variable from the datasets
 del df_train['property_value']
 del df_test['property_value']
