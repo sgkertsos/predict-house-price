@@ -45,8 +45,11 @@ We use the **scikit-learn** python library to handle data splitting, model train
 
 ### Application flow
 
-#### Application flow diagram
+Below you can see the application flow diagram.  
+
 ![image info](./images/app_flow_diagram.png)  
+
+The user opens a browser and accesses the house features form which is actually a streamlit app. When the user fills in the form with the desired values he/she clicks on the **Calculate price** button. The streamlit app uses a function from the **predict_service_functions.py** file to connect to the web service **(predict_service.py)**. The connection is made by using the **/predict_house_price** endpoint. The **predict** function uses the model **(model.bin)** to predict a house price. The price is then returned to the user and displayed in the appropriate form field. The **init.py** script runs when the application starts. You can read more about this script in the **Run the application** section.
 
 ### Application structure
 
