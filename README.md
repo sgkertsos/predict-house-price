@@ -46,7 +46,7 @@ We use the **scikit-learn** python library to handle data splitting, model train
 ### Application flow
 
 #### Application flow diagram
-![image info](./images/rag_flow.png)  
+![image info](./images/app_flow_diagram.png)  
 
 ### Application structure
 
