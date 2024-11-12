@@ -20,7 +20,7 @@ but you don't need to download it. It can be found in the **data** folder as **d
 ### Tecnologies used
 
 #### Jupyter notebook
-![image info](./images/jupyter_logo.png)  
+![image info](./images/Jupyter_logo.png)  
 Jupyter notebook is used run the **notebook.ipynb** file. We use this file for model evaluation and model selection. You will be able to see how each model was evaluated, evaluation graphs and also some metrics as RMSE.
 
 #### Gunicorn
