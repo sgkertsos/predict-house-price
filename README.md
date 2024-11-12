@@ -67,7 +67,7 @@ The following folders/files are included in the application:
 * **notebook.ipynb** This is a Jupyter notebook file which was used for model evaluation and model final selection. After the best model with its parameters is selected, this model is then used in the application.
 * **README.md**. This file.
 
-### Run the application
+### Install Jupyter Notebook and Docker
 
 #### Install Jupyter Notebook
 To install Jupyter Notebook you can use the following link:
@@ -79,6 +79,8 @@ To install Docker and Docker Compose you can use the following links:
 
 https://docs.docker.com/engine/install/  
 https://docs.docker.com/compose/install/
+
+### Run the application
 
 #### Clone the github repository
 Open a terminal, navigate to a folder where you want the repository files to be stored and then type:  
@@ -123,3 +125,16 @@ The application loads and you are presented with the house features form.
 ![image info](./images/form_upper.png)  
   
 ![image info](./images/form_lower.png)  
+
+Fill in all the house features and the click on the **Calculate Price** button. The house price is displayed in the field below.
+
+### Run notebook.ipynb Jupyter Notebook
+If you want to check how the model evaluation was made, you can do it by opening the **notebook.ipynb** file in Jupyter Notebook and execute the code in each cell.
+
+To start Jupyter Notebook type the following in your terminal:
+
+```console
+jupyter notebook
+```
+Copy the URL that is shown in your terminal and paste it in your preferred browser. The following picture appears. Double click on the **notebook.ipynb** file. It opens in a different tab.
+
