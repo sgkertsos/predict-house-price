@@ -119,3 +119,6 @@ Open your preferred browser and navigate to the following address:
 http://localhost:8501
 
 The application loads and you are presented with the house features form.
+
+![image info](./images/form_upper.png)  
+![image info](./images/form_lower.png)  
