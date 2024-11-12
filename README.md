@@ -107,7 +107,7 @@ When the Gunicorn docker container starts for the first time, the **init.py** sc
 
 This model is then loaded by the house price predict web service to predict house prices. 
 
-**Note**
+**Note**  
 The script checks if the model file **(model.bin)** file exists. If the file exists, the script will not perform the initialiation process again.
 
 ### Access the user interface
