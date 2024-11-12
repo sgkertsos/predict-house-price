@@ -136,5 +136,9 @@ To start Jupyter Notebook type the following in your terminal:
 ```console
 jupyter notebook
 ```
-Copy the URL that is shown in your terminal and paste it in your preferred browser. The following picture appears. Double click on the **notebook.ipynb** file. It opens in a different tab.
+Copy the URL that is shown in your terminal and paste it in your preferred browser. The following picture appears. 
+
+![image info](./images/jupyter.png)  
+
+Double click on the **notebook.ipynb** file. The file is opened in a different tab.
 
