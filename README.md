@@ -147,7 +147,7 @@ Double click on the **notebook.ipynb** file. The file is opened in a different t
 * We setup a validation framework.
 * We calculate feature importance.
 * We train and evaluate three different models:
-* * Linear Regression
+  * Linear Regression
   * Decision Tree  
     The model is evaluated for multiple **max_depth** values.  
   * Random Forest  
