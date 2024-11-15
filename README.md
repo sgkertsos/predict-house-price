@@ -140,5 +140,22 @@ Copy the URL that is shown in your terminal and paste it in your preferred brows
 
 ![image info](./images/jupyter.png)  
 
-Double click on the **notebook.ipynb** file. The file is opened in a different tab.
+Double click on the **notebook.ipynb** file. The file is opened in a different tab. In this file we do the following:
+
+* We load, clean the data and check for missing values.
+* We perform Exploratory Data Analysis. 
+* We setup a validation framework.
+* We calculate feature importance.
+* We train and evaluate three different models:
+* * Linear Regression
+  * Decision Tree
+  * Random Forest
+    
+  RMSE is calculated for each model. The best RMSE is 0.065 for the Random Forest model.
+
+* We can fill in house features and use the Random Forest model to make a price prediction.
+
+
+
+
 
