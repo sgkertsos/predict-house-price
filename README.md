@@ -20,7 +20,7 @@ but you don't need to download it. It can be found in the **data** folder as **d
 ### Tecnologies used
 
 #### Jupyter notebook
-![image info](./images/jupyter.png)  
+![image info](./images/Jupyter_logo.png)  
 Jupyter notebook is used run the **notebook.ipynb** file. We use this file for model evaluation and model selection. You will be able to see how each model was evaluated, evaluation graphs and also some metrics as RMSE.
 
 #### Gunicorn
@@ -45,8 +45,11 @@ We use the **scikit-learn** python library to handle data splitting, model train
 
 ### Application flow
 
-#### Application flow diagram
-![image info](./images/rag_flow.png)  
+Below you can see the application flow diagram.  
+
+![image info](./images/app_flow_diagram.png)  
+
+The user opens a browser and accesses the house features form which is actually a streamlit app. When the user fills in the form with the desired values he/she clicks on the **Calculate price** button. The streamlit app uses a function from the **predict_service_functions.py** file to connect to the web service **(predict_service.py)**. The connection is made by using the **/predict_house_price** endpoint. The **predict** function uses the model **(model.bin)** to predict a house price. The price is then returned to the user and displayed in the appropriate form field. The **init.py** script runs when the application starts. You can read more about this script in the **Run the application** section.
 
 ### Application structure
 
@@ -64,7 +67,7 @@ The following folders/files are included in the application:
 * **notebook.ipynb** This is a Jupyter notebook file which was used for model evaluation and model final selection. After the best model with its parameters is selected, this model is then used in the application.
 * **README.md**. This file.
 
-### Run the application
+### Install Jupyter Notebook and Docker
 
 #### Install Jupyter Notebook
 To install Jupyter Notebook you can use the following link:
@@ -76,6 +79,8 @@ To install Docker and Docker Compose you can use the following links:
 
 https://docs.docker.com/engine/install/  
 https://docs.docker.com/compose/install/
+
+### Run the application
 
 #### Clone the github repository
 Open a terminal, navigate to a folder where you want the repository files to be stored and then type:  
@@ -102,10 +107,14 @@ When the Gunicorn docker container starts for the first time, the **init.py** sc
 * Data is loaded
 * Data preparation is made
 * Data is split into train and test data
+* Test data is saved as **test.csv** in the **/app/data** folder so that you can have some examples to play with.
 * A Random Forest Regressor model with specific parameters is trained. The specific model and the specific parameters were selected after model evaluation was performed by using the **notebook.ipynb** Jupyter Notebook file.
 * The model is saved under the filename **model.bin**.
 
 This model is then loaded by the house price predict web service to predict house prices. 
+
+**Note**  
+The script checks if the model file **(model.bin)** file exists. If the file exists, the script will not perform the initialiation process again.
 
 ### Access the user interface
 Open your preferred browser and navigate to the following address:
@@ -113,3 +122,62 @@ Open your preferred browser and navigate to the following address:
 http://localhost:8501
 
 The application loads and you are presented with the house features form.
+
+![image info](./images/form_upper.png)  
+  
+![image info](./images/form_lower.png)  
+
+Fill in all the house features and the click on the **Calculate Price** button. The house price is displayed in the field below.
+
+### Run notebook.ipynb Jupyter Notebook
+If you want to check how the model evaluation was made, you can do it by opening the **notebook.ipynb** file in Jupyter Notebook and execute the code in each cell.
+
+To start Jupyter Notebook type the following in your terminal:
+
+```console
+jupyter notebook
+```
+Copy the URL that is shown in your terminal and paste it in your preferred browser. The following picture appears. 
+
+![image info](./images/jupyter.png)  
+
+Double click on the **notebook.ipynb** file. The file is opened in a different tab. In this file we do the following:
+
+* We load, clean the data and check for missing values.
+* We perform Exploratory Data Analysis. 
+* We setup a validation framework.
+* We calculate feature importance.
+* We train and evaluate three different models:
+  * Linear Regression
+  * Decision Tree  
+    The model is evaluated for multiple **max_depth** values.  
+  * Random Forest  
+    The model is evaluated for multiple **max_depth** and **n_estimators** values.  
+    
+  RMSE is calculated for each model. The best RMSE is 0.065 for the Random Forest model.  
+
+* We can fill in house features and use the Random Forest model to make a price prediction.  
+
+Each notebook cell has a short description of what is actually done.
+
+### Notes
+
+#### Access streamlit container terminal
+First you have to find the streamlit container id.
+
+Type:
+
+```console
+docker ps
+```
+and note the streamlit container id, eg 68967bc26fc0
+
+Copy the container id and then type:
+
+```console
+docker exec -it 68967bc26fc0 bash
+```
+You are now in the **/app** folder and you are ready to interact with the application files, eg take a look at the **test.csv** file mentioned earlier.
+
+
+
