@@ -92,7 +92,7 @@ git clone https://github.com/sgkertsos/predict-house-price.git
 Start the application by typing the following commands:
 
 ```console
-cd app
+cd predict-house-price/app
 docker compose up
 ```
 Wait for the application to load. 
