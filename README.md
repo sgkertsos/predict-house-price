@@ -148,14 +148,14 @@ Double click on the **notebook.ipynb** file. The file is opened in a different t
 * We calculate feature importance.
 * We train and evaluate three different models:
 * * Linear Regression
-  * Decision Tree
-    The model is evaluated for multiple **max_depth** values.
-  * Random Forest
-    The model is evaluated for multiple **max_depth** and **n_estimators** values.
+  * Decision Tree  
+    The model is evaluated for multiple **max_depth** values.  
+  * Random Forest  
+    The model is evaluated for multiple **max_depth** and **n_estimators** values.  
     
-  RMSE is calculated for each model. The best RMSE is 0.065 for the Random Forest model.
+  RMSE is calculated for each model. The best RMSE is 0.065 for the Random Forest model.  
 
-* We can fill in house features and use the Random Forest model to make a price prediction.
+* We can fill in house features and use the Random Forest model to make a price prediction.  
 
 
 
