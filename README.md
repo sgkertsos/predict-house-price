@@ -107,6 +107,7 @@ When the Gunicorn docker container starts for the first time, the **init.py** sc
 * Data is loaded
 * Data preparation is made
 * Data is split into train and test data
+* Test data is saved as **test.csv** in the **/app/data** folder so that you can have some examples to play with.
 * A Random Forest Regressor model with specific parameters is trained. The specific model and the specific parameters were selected after model evaluation was performed by using the **notebook.ipynb** Jupyter Notebook file.
 * The model is saved under the filename **model.bin**.
 
@@ -157,7 +158,26 @@ Double click on the **notebook.ipynb** file. The file is opened in a different t
 
 * We can fill in house features and use the Random Forest model to make a price prediction.  
 
+Each notebook cell has a short description of what is actually done.
 
+### Notes
+
+#### Access streamlit container terminal
+First you have to find the streamlit container id.
+
+Type:
+
+```console
+docker ps
+```
+and note the streamlit container id, eg 68967bc26fc0
+
+Copy the container id and then type:
+
+```console
+docker exec -it 68967bc26fc0 bash
+```
+You are now in the **/app** folder and you are ready to interact with the application files, eg take a look at the **test.csv** file mentioned earlier.
 
 
 
