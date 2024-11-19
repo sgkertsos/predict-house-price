@@ -92,7 +92,7 @@ git clone https://github.com/sgkertsos/predict-house-price.git
 Start the application by typing the following commands:
 
 ```console
-cd app
+cd predict-house-price/app
 docker compose up
 ```
 Wait for the application to load. 
@@ -162,22 +162,22 @@ Each notebook cell has a short description of what is actually done.
 
 ### Notes
 
-#### Access streamlit container terminal
-First you have to find the streamlit container id.
+#### Access docker container terminal
+First you have to find the docker container id.
 
 Type:
 
 ```console
 docker ps
 ```
-and note the streamlit container id, eg 68967bc26fc0
+and note the container id, eg 68967bc26fc0
 
 Copy the container id and then type:
 
 ```console
 docker exec -it 68967bc26fc0 bash
 ```
-You are now in the **/app** folder and you are ready to interact with the application files, eg take a look at the **test.csv** file mentioned earlier.
+You are now in the **/app** folder and you are ready to interact with the application files. If for example you are in the Gunicorn/Flask container, you can take a look at the **test.csv** file mentioned earlier.
 
 
 
