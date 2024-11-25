@@ -132,7 +132,7 @@ Fill in all the house features and the click on the **Calculate Price** button. 
 ### Run notebook.ipynb Jupyter Notebook
 If you want to check how the model evaluation was made, you can do it by opening the **notebook.ipynb** file in Jupyter Notebook and execute the code in each cell.
 
-To start Jupyter Notebook type the following in your terminal:
+To start Jupyter Notebook make sure that you are in the **predict-house-price** folder and then type the following in your terminal:
 
 ```console
 jupyter notebook
